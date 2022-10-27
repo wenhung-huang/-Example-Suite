@@ -25,12 +25,12 @@ all: $(BUILD_DIR)/$(TARGET).out
 	
 
 $(BUILD_DIR)/%.out: $(OBJS) 
-	$(CC) $^ 
+	@$(CC) $^ 
 	
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c 
 	mkdir -p $(@D)
-	$(CC) -c $< -o $@
+	@$(CC) -c $< -o $@
 
 clean:
 	rm -rf $(BUILD_DIR)
