@@ -25,7 +25,7 @@ all: $(BUILD_DIR)/$(TARGET).out
 	
 
 $(BUILD_DIR)/%.out: $(OBJS) 
-	@$(CC) $^ 
+	@$(CC) --unresolved-symbols=ignore-all $^ 
 	
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c 
